@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700');
+
+body{
+    font-family: Barlow;
+    font-size: 18px;
+    color: hsl(230, 11%, 40%);
+}
+a {
+        text-decoration: none;
+}
+@media screen and (max-width: 650px){
+    #content{
+        display: grid;
+        grid-template-columns: 235px 485px;
+        grid-auto-rows: minmax(50px, auto);
+        max-width: 650px;
+        grid-template-areas:
+            "logo hamburger"
+            "header header"
+            "main main"
+            "footer footer";
+    }
+    #hamburger{
+        grid-area: hamburger;
+        text-align: right;
+        background-color: hsl(207, 33%, 95%);
+        padding-top: 60px;
+        padding-bottom: 480px;
+        padding-right: 320px;
+        border-bottom-left-radius: 15%;
+    }
+    #logo{
+        grid-area: logo;
+        margin-left: 45px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    main {
+        grid-area: main;
+        padding-left: 40px;
+        margin-top: -30px;
+        margin-bottom: 50px;
+        z-index: 2;
+    }
+    main a {
+        font-family: Barlow Condensed;
+        font-size: 15px;
+        color: hsl(230, 11%, 40%);
+        padding-right: 10px;
+    }
+    main a:hover {
+        background-color: hsl(230, 29%, 20%);
+        color: white;
+        border-radius: 20%;
+        padding: 5px;
+    }
+    header{
+        grid-area: header;
+        margin-top: -280px;
+        z-index: 1;
+    }
+    #shadow {
+        width: 105px;
+        height: 215px;
+        margin-left: 45px;
+        margin-top: -90px;
+        box-shadow: 10px 50px 70px hsl(0, 0%, 80%);
+    }
+    #svgImage {
+        margin-top: -230px;
+        margin-left: 17px;
+    }
+}
+/* desktop grid */
+@media screen and (min-width: 651px){
+    #content{
+      	display: grid;
+      	grid-template-columns: 480px 720px;
+      	grid-auto-rows: minmax(50px, auto);
+      	max-width: 1200px;
+        margin-top: 60px;
+        margin-left: 130px;
+        grid-template-areas:
+            "logo nav"
+            "main header"
+            "footer footer";
+    }
+    #hamburger{
+        grid-area: hamburger;
+        text-align: right;
+        margin-top: -50px;
+    }
+    #logo{
+        grid-area: logo;
+        padding-top: 100px;
+        margin-top: -90px;
+    }
+    nav {
+        grid-area: nav;
+        font-family: Barlow Condensed;
+        text-align: center;
+        background-color: hsl(207, 33%, 95%);
+        padding-top: 100px;
+        padding-bottom: 350px;
+        margin-top: -90px;
+        margin-bottom: 50px;
+        border-bottom-left-radius: 10%;
+    }
+    header{
+        grid-area: header;
+        margin-bottom: 70px;
+        margin-top: -290px;
+        padding-left: 20px;
+        z-index: 1;
+     }
+    main {
+        grid-area: main;
+        margin-top: -250px;
+        margin-bottom: 50px;
+    }
+    main a {
+        font-family: Barlow Condensed;
+        font-size: 15px;
+        color: hsl(230, 11%, 40%);
+        margin-right: 10px;
+    }
+    main a:hover {
+        background-color: hsl(230, 29%, 20%);
+        color: white;
+        border-radius: 20%;
+        padding: 5px;
+    }
+    #shadow {
+        width: 166px;
+        height: 334px;
+        margin-left: 45px;
+        box-shadow: 10px 50px 70px hsl(0, 0%, 80%);
+    }
+    #svgImage {
+        margin-top: -347px;
+    }
+}
+nav a {
+    font-family: Barlow Condensed;
+    font-size: 15px;
+    color: hsl(230, 29%, 20%);
+    font-weight: bold;
+    padding: 20px;
+}
+nav a:hover {
+    color: darkred;
+}
+.hoverItem {
+    color: hsl(231, 7%, 65%);
+}
+.hoverItem:hover {
+    color: darkred;
+}
+h1 {
+    font-family: Barlow Condensed;
+    font-weight: 700;
+    font-size: 50px;
+    color: hsl(230, 29%, 20%);
+}
+btn {
+    font-family: Barlow Condensed;
+    background-color: hsl(0, 100%, 68%);
+    color: hsl(207, 33%, 95%);
+    padding: 10px 25px;
+    border-radius: 5%;
+}
+btn:hover {
+    background-color: darkred;
+    border-radius: 5%;
+}
+footer {
+    grid-area: footer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
